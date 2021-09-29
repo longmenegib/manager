@@ -1,0 +1,62 @@
+ <!-- MODAL ADD -->
+ <form method='post' action="<?= base_url('save-employee') ?>">
+            <div class="modal fade" id="Modal_Add_Emp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add New Employee</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                        <div class="form-group row">
+                            <div class="col-md-10">
+                              <input type="hidden" name="org_id" id="org_id" class="form-control" placeholder="id org" value="<?= $org[0]['orgId'] ?>">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-10">
+                              <input type="hidden" name="org_name" id="org_name" class="form-control" placeholder="org name" value="<?= $org[0]['orgName'] ?>">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label">First name</label>
+                            <div class="col-md-10">
+                              <input type="text" name="firstname" id="firstname" class="form-control" placeholder="First name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label">Last name</label>
+                            <div class="col-md-10">
+                              <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Last name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label">Email</label>
+                            <div class="col-md-10">
+                              <input type="text" name="email" id="email" class="form-control" placeholder="Ex: example@gmail.com">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label">Title</label>
+                            <div class="col-md-10">
+                              <input type="text" name="title" id="title" class="form-control" placeholder="Ex: Software engineer">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label">Department</label>
+                            <div class="col-md-10">
+                              <input type="text" name="department" id="department" class="form-control" placeholder="Ex: Software Engineering">
+                            </div>
+                        </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <input type="submit" id="btn_save" class="btn btn-primary" value='Save employee'>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </form>
+        <!--END MODAL ADD-->
