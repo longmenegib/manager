@@ -1,5 +1,5 @@
     <!--MODAL DELETE-->
-    <form method="post" action="<?= base_url('delete-org') ?>">
+    <form method="post" action="<?= base_url('delete-org') ?>" autocomplete="off">
             <div class="modal fade" id="Modal_Delete_Org" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">

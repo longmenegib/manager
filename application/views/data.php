@@ -15,7 +15,9 @@
   <link rel="stylesheet" href="<?= base_url('public/assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')?>">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= base_url('public/assets/dist/css/adminlte.min.css')?>">
+  <link rel="stylesheet" href="<?= base_url()?>/public/css/toast.css">
 
+  <script src="<?= base_url()?>/public/js/toast.js"></script>
   <script src="<?= base_url('public/assets/plugins/jquery/jquery.min.js')?>"></script>
 </head>
 <body class="hold-transition sidebar-mini">
@@ -187,6 +189,25 @@
   <!-- /.control-sidebar -->
 </div>
 
+<?php
+   if($notify == "orgcreated"){
+    ?>
+        <div id="snackbar" style="background-color: green; top:60px">Organizations created successfully</div>
+        <script>myFunction()</script>
+    <?php
+}else if($notify == "empcreated"){
+  ?>
+      <div id="snackbar" style="background-color: green; top:60px">Employee added successfully</div>
+      <script>myFunction()</script>
+  <?php
+}else if($notify == "equipcreated"){
+  ?>
+      <div id="snackbar" style="background-color: green; top:60px">Equipment added to an employee</div>
+      <script>myFunction()</script>
+  <?php
+}
+
+?>
 
 <!-- jQuery -->
 

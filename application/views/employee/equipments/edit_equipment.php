@@ -1,5 +1,5 @@
 <!-- MODAL ADD -->
-<form method='post' action="<?= base_url('update-equipment')?>">  
+<form method='post' action="<?= base_url('update-equipment')?>" autocomplete="off">  
     <div class="modal fade" id="Modal_Edit_Equipment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">

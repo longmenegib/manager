@@ -25,7 +25,6 @@ class Welcome extends CI_Controller {
 			exit();
 		}else{
 			$error = $this->session->flashdata('error');
-			echo $error;
 			if($error != null){
 				if($error == 0){
 					$data['error'] = '0';

@@ -1,5 +1,5 @@
   <!-- MODAL EDIT -->
-  <form action="<?= base_url('update-org')?>" method="post">
+  <form action="<?= base_url('update-org')?>" method="post" autocomplete="off">
             <div class="modal fade" id="Modal_Edit_Org" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">

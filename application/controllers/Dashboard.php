@@ -18,6 +18,14 @@ class Dashboard extends CI_Controller {
 	public function index()
 	{
         if($this->session->has_userdata('user_email')){
+            $notify = $this->session->flashdata('notify');
+            if($notify != null){
+                if($notify == "orgcreated"){
+                    $data['notify'] = 'orgcreated';
+                }
+            }else{
+                $data['notify'] = '';
+            }
             $data['page_name'] = 'list_org';
             $data['list_organization'] = $this->fetch_org();
             $data['orgName'] = '';
@@ -35,7 +43,9 @@ class Dashboard extends CI_Controller {
         if($this->session->has_userdata('user_email')){
             $data['page_name'] = 'list_org';
             $data['list_organization'] = $this->fetch_org();
+
             $data['orgName'] = '';
+            $data['notify'] = '';
 			$this->load->view('data', $data);
             
 		}else{
@@ -90,10 +100,7 @@ class Dashboard extends CI_Controller {
     
             
             $saving = $this->organization_model->save_organization($orgData);
-            // echo '<pre>';
-            // print_r($orgData);
-            // echo '</pre>';
-            // die();
+            $this->session->set_flashdata('notify', 'orgcreated');
             redirect('dashboard');
             exit();
 		}else{
@@ -117,10 +124,8 @@ class Dashboard extends CI_Controller {
     
             
             $saving = $this->employee_model->save_employee($orgData);
-            // echo '<pre>';
-            // print_r($orgData);
-            // echo '</pre>';
-            // die();
+
+            $this->session->set_flashdata('notify', 'empcreated');
             redirect("dashboard/org/$orgName");
 		}else{
 			$this->load->view('authentication/authentication');
@@ -157,7 +162,15 @@ class Dashboard extends CI_Controller {
                 $data['list_employee'] = $this->fetch_employee($userid, $org[0]['orgId']);
                 $data['list_equipment'] = $this->fetch_equipment($userid, $org[0]['orgId']);
                 $data['list_reports'] = $this->fetch_reports($userid, $org[0]['orgId']);
-                
+               
+                $notify = $this->session->flashdata('notify');
+                if($notify != null){
+                    if($notify == "empcreated"){
+                        $data['notify'] = 'empcreated';
+                    }else if($notify == "equipcreated"){
+                        $data['notify'] = 'equipcreated';
+                    } 
+                }
 			    $this->load->view('data', $data);
             }else{
                 redirect('dashboard');
@@ -260,6 +273,7 @@ class Dashboard extends CI_Controller {
             // print_r($orgData);
             // echo '</pre>';
             // die();
+            $this->session->set_flashdata('notify', 'equipcreated');
             redirect("dashboard/org/$orgName");
 		}else{
 			$this->load->view('authentication/authentication');

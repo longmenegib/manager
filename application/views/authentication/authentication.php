@@ -12,22 +12,22 @@
 <body>
 <div class="container" id="container">
     <div class="form-container sign-up-container">
-        <form action="<?= base_url('register') ?>" method="post">
+        <form action="<?= base_url('register') ?>" method="post" autocomplete="off">
             <h1>Create Account</h1>
-            <input type="text" placeholder="First name" name='firstname'/>
-            <input type="text" placeholder="Last name" name='lastname'/>
-            <input type="text" placeholder="Email" name='email'/>
-            <input type="password" placeholder="Password" name='password'/>
-            <input type="password" placeholder="Confirm password" name='c_password'/>
+            <input type="text" placeholder="First name" name='firstname'  />
+            <input type="text" placeholder="Last name" name='lastname' />
+            <input type="text" placeholder="Email" name='email' />
+            <input type="password" placeholder="Password" name='password' />
+            <input type="password" placeholder="Confirm password" name='c_password' />
             <button>Sign Up</button>
         </form>
     </div>
     <div class="form-container sign-in-container">
         <!-- Sign In form code goes here -->
-        <form action="<?= base_url('connect') ?>"  method="post">
+        <form action="<?= base_url('connect') ?>"  method="post" autocomplete="off">
             <h1>Sign in</h1>
-            <input type="email" placeholder="Email" name='email'/>
-            <input type="password" placeholder="Password" name='password'/>
+            <input type="email" placeholder="Email" name='email' />
+            <input type="password" placeholder="Password" name='password' />
             <a href="#">Forgot your password?</a>
             <button>Sign In</button>
         </form>
@@ -51,12 +51,7 @@
 </div>
 
     <?php
-    if($error == "nothing"){
-        ?>
-            <div id="snackbar">nothing to display</div>
-            <script>myFunction()</script>
-        <?php
-    }else if($error == "0"){
+    if($error == "0"){
         ?>
             <div id="snackbar" style="background-color: red;">Wrong email address</div>
             <script>myFunction()</script>

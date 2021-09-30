@@ -1,5 +1,5 @@
 <!-- MODAL ADD -->
-<form method='post' action="<?= base_url('save-org')?>">  
+<form method='post' action="<?= base_url('save-org')?>" autocomplete="off">  
     <div class="modal fade" id="Modal_Add_Org" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">

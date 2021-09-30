@@ -1,5 +1,5 @@
     <!--MODAL DELETE-->
-    <form method="post" action="<?= base_url('delete-employee') ?>">
+    <form method="post" action="<?= base_url('delete-employee') ?>"  autocomplete="off">
             <div class="modal fade" id="Modal_Delete_Employee" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
