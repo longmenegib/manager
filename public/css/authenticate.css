@@ -29,6 +29,11 @@ a {
     margin: 15px 0;
 }
 
+button:hover{
+    border: 1px solid rgb(99, 142, 216);
+    background-color: rgb(99, 139, 207);
+}
+
 button {
     border-radius: 20px;
     border: 1px solid rgb(55,81,126);

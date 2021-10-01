@@ -170,6 +170,8 @@ class Dashboard extends CI_Controller {
                     }else if($notify == "equipcreated"){
                         $data['notify'] = 'equipcreated';
                     } 
+                }else{
+                    $data['notify'] = '';
                 }
 			    $this->load->view('data', $data);
             }else{

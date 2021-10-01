@@ -62,8 +62,8 @@
           <h1>Better Solutions For Your Business</h1>
           <h2>Manage your employees presence everywhere you are</h2>
           <div class="d-lg-flex">
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true">
+            <a href="<?= base_url('authenticate') ?>" class="btn-get-started scrollto">Get Started</a>
+            <a href="#" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true">
 			 How it works <i class="icofont-play-alt-2"></i></a>
           </div>
         </div>
@@ -78,7 +78,7 @@
   <main id="main">
 
     <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
+    <!-- <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -108,10 +108,10 @@
         </div>
 
       </div>
-    </section><!-- End About Us Section -->
+    </section>End About Us Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
+    <!-- <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -155,10 +155,10 @@
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section>End Services Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <!-- <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -229,12 +229,12 @@
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section>End Contact Section -->
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <!-- <footer id="footer">
 
     <div class="footer-newsletter">
       <div class="container">
@@ -307,15 +307,15 @@
       <div class="copyright">
         &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
       </div>
-      <div class="credits">
+      <div class="credits"> -->
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>End Footer -->
 
   <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
   <div id="preloader"></div>
